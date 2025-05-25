@@ -1,0 +1,2885 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>社会信用治理决策支持与风险预警-案例检索</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <link rel="stylesheet" href="../sdk.css" />
+  <link rel="stylesheet" href="../helper.css" />
+  <link rel="stylesheet" href="../iconfont.css" />
+  <!-- 这是默认主题所需的，如果是其他主题则不需要 -->
+  <!-- 从 1.1.0 开始 sdk.css 将不支持 IE 11，如果要支持 IE11 请引用这个 css，并把前面那个删了 -->
+  <!-- <link rel="stylesheet" href="sdk-ie11.css" /> -->
+  <!-- 不过 amis 开发团队几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
+  <style>
+    html,
+    body,
+    .app-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="app-wrapper"></div>
+  <script src="../sdk.js"></script>
+  <script src="../script/analysis.js"></script>
+  <script src="../config/config.js"></script>
+  <script type="text/javascript">
+    (function () {
+      let amis = amisRequire('amis/embed');
+      // 通过替换下面这个配置来生成不同页面
+      let amisJSON = {
+        "type": "page",
+        "body": [
+          {
+            "type": "container",
+            "id": "u:c408d1e4aa61",
+            "style": {
+              "display": "block",
+              "position": "static"
+            },
+            "body": [
+              {
+                "type": "button",
+                "label": "社会信用治理决策支持与风险预警",
+                "onEvent": {
+                  "click": {
+                    "actions": [
+                      {
+                        "actionType": "url",
+                        "args": {
+                          "url": xy_amis_url + "/pages/home.html",
+                          "blank": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "size": "-",
+                "className": "m-l-lg",
+                "themeCss": {
+                  "className": {
+                    "className": "m-xl",
+                    "font:default": {
+                      "color": "#bffaff",
+                      "fontSize": "25px",
+                      "fontWeight": "var(--fonts-weight-3)"
+                    },
+                    "background:default": "transparent",
+                    "background:active": "transparent",
+                    "background:hover": "transparent",
+                    "border:default": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    },
+                    "font:active": {
+                      "color": "#144bcc",
+                      "fontWeight": "var(--fonts-weight-3)",
+                      "fontSize": "25px"
+                    },
+                    "border:active": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    },
+                    "font:hover": {
+                      "color": "#144bcc",
+                      "fontWeight": "var(--fonts-weight-3)",
+                      "fontSize": "25px"
+                    },
+                    "border:hover": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    }
+                  },
+                  "iconClassName": {
+                    "iconSize:active": "25px",
+                    "iconSize:default": "25px",
+                    "iconSize:hover": "25px"
+                  }
+                },
+                "block": false,
+                "icon": "fa fa-slideshare",
+                "id": "u:2d512d3508aa"
+              },
+              {
+                "type": "button",
+                "label": "案例检索",
+                "onEvent": {
+                  "click": {
+                    "actions": [
+                      {
+                        "actionType": "url",
+                        "args": {
+                          "url": xy_amis_url + "/pages/home.html",
+                          "blank": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "size": "-",
+                "className": "m-l-lg",
+                "themeCss": {
+                  "className": {
+                    "font:default": {
+                      "color": "white",
+                      "fontSize": "20px",
+                      "fontWeight": "var(--fonts-weight-3)"
+                    },
+                    "background:default": "transparent",
+                    "border:default": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    },
+                    "font:active": {
+                      "color": "#144bcc",
+                      "fontWeight": "var(--fonts-weight-3)",
+                      "fontSize": "20px"
+                    },
+                    "background:active": "transparent",
+                    "border:active": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    },
+                    "font:hover": {
+                      "color": "#144bcc",
+                      "fontWeight": "var(--fonts-weight-3)",
+                      "fontSize": "20px"
+                    },
+                    "background:hover": "transparent",
+                    "border:hover": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    }
+                  }
+                },
+                "block": false,
+                "id": "u:22e5727f47db"
+              },
+              {
+                "type": "button",
+                "label": "智能分析",
+                "onEvent": {
+                  "click": {
+                    "actions": [
+                      {
+                        "actionType": "url",
+                        "args": {
+                          "url": xy_amis_url + "/chat/Rh1Mbm2CzJyyfZXb",
+                          "blank": false
+                        }
+                      }
+                    ]
+                  }
+                },
+                "size": "-",
+                "className": "m-l-lg",
+                "themeCss": {
+                  "className": {
+                    "font:default": {
+                      "color": "#bffaff",
+                      "fontSize": "20px",
+                      "fontWeight": "var(--fonts-weight-3)"
+                    },
+                    "background:default": "transparent",
+                    "border:default": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    },
+                    "font:active": {
+                      "color": "#144bcc",
+                      "fontWeight": "var(--fonts-weight-3)",
+                      "fontSize": "20px"
+                    },
+                    "background:active": "transparent",
+                    "border:active": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    },
+                    "font:hover": {
+                      "color": "#144bcc",
+                      "fontWeight": "var(--fonts-weight-3)",
+                      "fontSize": "20px"
+                    },
+                    "background:hover": "transparent",
+                    "border:hover": {
+                      "top-border-style": "var(--borders-style-1)",
+                      "left-border-style": "var(--borders-style-1)",
+                      "right-border-style": "var(--borders-style-1)",
+                      "bottom-border-style": "var(--borders-style-1)"
+                    }
+                  }
+                },
+                "block": false,
+                "id": "u:c5620de08299"
+              }
+            ],
+            "isFixedHeight": false,
+            "isFixedWidth": false,
+            "themeCss": {
+              "baseControlClassName": {
+                "padding-and-margin:default": {
+                  "paddingLeft": "30px",
+                  "paddingTop": "30px"
+                }
+              }
+            }
+          },
+          {
+            "type": "container",
+            "id": "u:34804fe571b2",
+            "body": [
+              {
+                "type": "input-group",
+                "body": [
+                  {
+                    "type": "input-text",
+                    "name": "content",
+                    "validateOnChange": false,
+                    "id": "u:ac953278ba71",
+                    "placeholder": "请输入检索文本",
+                    "options": [
+                      {
+                        "label": "义务献血",
+                        "value": "义务献血"
+                      }
+                    ],
+                    "onEvent": {
+                      "enter": {
+                        "actions": [
+                          {
+                            "actionType": "setValue",
+                            "componentId": "outer",
+                            "args": {
+                              "value": {
+                                "fulltext": "${fulltext}"
+                              }
+                            }
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service02"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service01"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service00"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "collapse000"
+                          }
+                        ]
+                      }
+                    },
+                    "multiple": false
+                  },
+                  {
+                    "type": "button",
+                    "icon": "fa fa-search",
+                    "onEvent": {
+                      "click": {
+                        "actions": [
+                          {
+                            "actionType": "setValue",
+                            "componentId": "outer",
+                            "args": {
+                              "value": {
+                                "keywords": "",
+                                "anyou": "",
+                                "case_name": "",
+                                "court_name": "",
+                                "case_no": "",
+                                "court_level": "",
+                                "type": "",
+                                "article_type": "",
+                                "procedure": "",
+                                "judge": "",
+                                "public_type": "",
+                                "law_office": "",
+                                "person": "",
+                                "law_article": "",
+                                "lawer": "",
+                                "date": "",
+                                "year": "",
+                                "content": "${content}"
+                              }
+                            }
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service02"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service01"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service00"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "collapse000"
+                          }
+                        ]
+                      }
+                    },
+                    "themeCss": {
+                      "className": {
+                        "font:default": {
+                          "fontWeight": "var(--fonts-weight-3)",
+                          "color": "rgb(5,24,82)"
+                        }
+                      }
+                    },
+                    "id": "u:ad143ff635c5"
+                  },
+                  {
+                    "type": "button",
+                    "label": "高级检索",
+                    "themeCss": {
+                      "className": {
+                        "font:default": {
+                          "fontWeight": "var(--fonts-weight-3)",
+                          "color": "rgb(5,24,8setValue2)"
+                        }
+                      }
+                    },
+                    "id": "u:1eb4e285c74f",
+                    "onEvent": {
+                      "click": {
+                        "actions": [
+                          {
+                            "componentId": "outer",
+                            "actionType": "setValue",
+                            "args": {
+                              "value": {
+                                "state": "${!state}"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "id": "u:961121fdae3f"
+              }
+            ],
+            "style": {
+              "position": "static",
+              "display": "block",
+              "width": "80%"
+            },
+            "wrapperBody": false,
+            "isFixedHeight": false,
+            "isFixedWidth": false,
+            "themeCss": {
+              "baseControlClassName": {
+                "padding-and-margin:default": {
+                  "margin": "auto",
+                  "padding-top": "30px",
+                  "padding-bottom": "10px"
+                }
+              }
+            }
+          },
+          {
+            "type": "wrapper",
+            "id": "u:3e72f7195a83",
+            "body": [
+              {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "combo",
+                    "items": [
+                      {
+                        "type": "tree-select",
+                        "label": "效力位阶",
+                        "themeCss": {
+                          "labelClassName": {
+                            "font:default": {
+                              "color": "rgb(5,24,82)"
+                            }
+                          }
+                        },
+                        "name": "grade_select",
+                        "options": [
+                          {
+                            "label": "法律",
+                            "value": "法律",
+                            "children": [],
+                            "name": "法律"
+                          },
+                          {
+                            "label": "行政法规",
+                            "value": "行政法规",
+                            "children": [
+                              {
+                                "label": "财政部",
+                                "value": "3",
+                                "children": [],
+                                "name": "财政部"
+                              },
+                              {
+                                "label": "多部门",
+                                "value": "4",
+                                "children": [],
+                                "name": "多部门"
+                              },
+                              {
+                                "label": "工业和信息化部",
+                                "value": "5",
+                                "children": [],
+                                "name": "工业和信息化部"
+                              },
+                              {
+                                "label": "国家发展和改革委员会",
+                                "value": "6",
+                                "children": [],
+                                "name": "国家发展和改革委员会"
+                              },
+                              {
+                                "label": "国家广播电视总局",
+                                "value": "7",
+                                "children": [],
+                                "name": "国家广播电视总局"
+                              },
+                              {
+                                "label": "国家市场监督管理总局",
+                                "value": "8",
+                                "children": [],
+                                "name": "国家市场监督管理总局"
+                              },
+                              {
+                                "label": "国家税务总局",
+                                "value": "9",
+                                "children": [],
+                                "name": "国家税务总局"
+                              },
+                              {
+                                "label": "国家医疗保障局",
+                                "value": "10",
+                                "children": [],
+                                "name": "国家医疗保障局"
+                              },
+                              {
+                                "label": "国家邮政局",
+                                "value": "11",
+                                "children": [],
+                                "name": "国家邮政局"
+                              },
+                              {
+                                "label": "国家知识产权局",
+                                "value": "12",
+                                "children": [],
+                                "name": "国家知识产权局"
+                              },
+                              {
+                                "label": "海关总署",
+                                "value": "13",
+                                "children": [],
+                                "name": "海关总署"
+                              },
+                              {
+                                "label": "交通运输部",
+                                "value": "14",
+                                "name": "交通运输部",
+                                "children": []
+                              },
+                              {
+                                "label": "教育部",
+                                "value": "15",
+                                "name": "教育部",
+                                "children": []
+                              },
+                              {
+                                "label": "科学技术部",
+                                "value": "16",
+                                "name": "科学技术部",
+                                "children": []
+                              },
+                              {
+                                "label": "民政部",
+                                "value": "17",
+                                "name": "民政部",
+                                "children": []
+                              },
+                              {
+                                "label": "农业农村部",
+                                "value": "18",
+                                "name": "农业农村部",
+                                "children": []
+                              },
+                              {
+                                "label": "人力资源与社会保障部",
+                                "value": "19",
+                                "name": "人力资源与社会保障部",
+                                "children": []
+                              },
+                              {
+                                "label": "商务部",
+                                "value": "20",
+                                "name": "商务部",
+                                "children": []
+                              },
+                              {
+                                "label": "生态环境部",
+                                "value": "21",
+                                "name": "生态环境部",
+                                "children": []
+                              },
+                              {
+                                "label": "水利部",
+                                "value": "22",
+                                "name": "水利部",
+                                "children": []
+                              },
+                              {
+                                "label": "外交部",
+                                "value": "23",
+                                "name": "外交部",
+                                "children": []
+                              },
+                              {
+                                "label": "文化和旅游部",
+                                "value": "24",
+                                "name": "化和旅游部",
+                                "children": []
+                              },
+                              {
+                                "label": "应急管理部",
+                                "value": "25",
+                                "name": "应急管理部",
+                                "children": []
+                              },
+                              {
+                                "label": "中国人民银行",
+                                "value": "26",
+                                "name": "中国人民银行",
+                                "children": []
+                              },
+                              {
+                                "label": "中国证券监督管理委员会",
+                                "value": "27",
+                                "name": "中国证券监督管理委员会",
+                                "children": []
+                              },
+                              {
+                                "label": "中央军事委员会",
+                                "value": "28",
+                                "name": "中央军事委员会",
+                                "children": []
+                              },
+                              {
+                                "label": "住房和城乡建设部",
+                                "value": "29",
+                                "name": "住房和城乡建设部",
+                                "children": []
+                              },
+                              {
+                                "label": "自然资源部",
+                                "value": "30",
+                                "name": "自然资源部",
+                                "children": []
+                              }
+                            ],
+                            "name": "行政法规"
+                          },
+                          {
+                            "label": "部门规章",
+                            "value": "部门规章",
+                            "children": [
+                              {
+                                "label": "财政部",
+                                "value": "31",
+                                "children": [],
+                                "name": "财政部"
+                              },
+                              {
+                                "label": "工业和信息化部",
+                                "value": "32",
+                                "children": [],
+                                "name": "工业和信息化部"
+                              },
+                              {
+                                "label": "公安部",
+                                "value": "33",
+                                "name": "公安部",
+                                "children": []
+                              },
+                              {
+                                "label": "交通运输部",
+                                "value": "34",
+                                "name": "交通运输部",
+                                "children": []
+                              },
+                              {
+                                "label": "教育部",
+                                "value": "35",
+                                "name": "教育部",
+                                "children": []
+                              },
+                              {
+                                "label": "科学技术部",
+                                "value": "36",
+                                "name": "科学技术部",
+                                "children": []
+                              },
+                              {
+                                "label": "民政部",
+                                "value": "37",
+                                "name": "民政部",
+                                "children": []
+                              },
+                              {
+                                "label": "农业农村部",
+                                "value": "38",
+                                "name": "农业农村部",
+                                "children": []
+                              },
+                              {
+                                "label": "人力资源与社会保障部",
+                                "value": "39",
+                                "name": "人力资源与社会保障部",
+                                "children": []
+                              },
+                              {
+                                "label": "商务部",
+                                "value": "40",
+                                "name": "商务部",
+                                "children": []
+                              },
+                              {
+                                "label": "生态环境部",
+                                "value": "41",
+                                "name": "生态环境部",
+                                "children": []
+                              },
+                              {
+                                "label": "水利部",
+                                "value": "42",
+                                "name": "水利部",
+                                "children": []
+                              },
+                              {
+                                "label": "司法部",
+                                "value": "43",
+                                "name": "司法部",
+                                "children": []
+                              },
+                              {
+                                "label": "外交部",
+                                "value": "44",
+                                "name": "外交部",
+                                "children": []
+                              },
+                              {
+                                "label": "文化和旅游部",
+                                "value": "45",
+                                "name": "化和旅游部",
+                                "children": []
+                              },
+                              {
+                                "label": "应急管理部",
+                                "value": "46",
+                                "name": "应急管理部",
+                                "children": []
+                              },
+                              {
+                                "label": "中国人民银行",
+                                "value": "47",
+                                "name": "中国人民银行",
+                                "children": []
+                              },
+                              {
+                                "label": "住房和城乡建设部",
+                                "value": "48",
+                                "name": "住房和城乡建设部",
+                                "children": []
+                              },
+                              {
+                                "label": "自然资源部",
+                                "value": "49",
+                                "name": "自然资源部",
+                                "children": []
+                              },
+                              {
+                                "label": "国家广播电视总局",
+                                "value": "50",
+                                "name": "国家广播电视总局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家国防科技工业局",
+                                "value": "51",
+                                "name": "国家国防科技工业局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家金融监督管理总局",
+                                "value": "52",
+                                "name": "国家金融监督管理总局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家粮食和物资储备局",
+                                "value": "53",
+                                "name": "国家粮食和物资储备局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家林业和草原局",
+                                "value": "54",
+                                "name": "国家林业和草原局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家市场监督管理总局",
+                                "value": "55",
+                                "name": "国家市场监督管理总局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家税务总局",
+                                "value": "56",
+                                "name": "国家税务总局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家体育总局",
+                                "value": "57",
+                                "name": "国家体育总局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家铁路局",
+                                "value": "58",
+                                "name": "国家铁路局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家统计局",
+                                "value": "59",
+                                "name": "国家统计局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家医疗保障局",
+                                "value": "60",
+                                "name": "国家医疗保障局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家知识产权局",
+                                "value": "61",
+                                "name": "国家知识产权局",
+                                "children": []
+                              },
+                              {
+                                "label": "中国气象局",
+                                "value": "62",
+                                "name": "中国气象局",
+                                "children": []
+                              },
+                              {
+                                "label": "国家国际发展合作署",
+                                "value": "63",
+                                "name": "国家国际发展合作署",
+                                "children": []
+                              },
+                              {
+                                "label": "海关总署",
+                                "value": "64",
+                                "name": "海关总署",
+                                "children": []
+                              },
+                              {
+                                "label": "审计署",
+                                "value": "65",
+                                "name": "审计署",
+                                "children": []
+                              },
+                              {
+                                "label": "国家发展和改革委员会",
+                                "value": "66",
+                                "name": "国家发展和改革委员会",
+                                "children": []
+                              },
+                              {
+                                "label": "国家卫生健康委员会",
+                                "value": "67",
+                                "name": "国家卫生健康委员会",
+                                "children": []
+                              },
+                              {
+                                "label": "国有资产监督管理委员会",
+                                "value": "68",
+                                "name": "国有资产监督管理委员会",
+                                "children": []
+                              },
+                              {
+                                "label": "中国银行保险监督管理委员会",
+                                "value": "69",
+                                "name": "中国银行保险监督管理委员会",
+                                "children": []
+                              },
+                              {
+                                "label": "中国证券监督管理委员会",
+                                "value": "70",
+                                "name": "中国证券监督管理委员会",
+                                "children": []
+                              },
+                              {
+                                "label": "中国人民银行",
+                                "value": "71",
+                                "name": "中国人民银行",
+                                "children": []
+                              }
+                            ],
+                            "name": "部门规章"
+                          },
+                          {
+                            "label": "地方性法规",
+                            "value": "地方性法规",
+                            "children": [
+                              {
+                                "label": "北京市",
+                                "value": "73",
+                                "children": [],
+                                "name": "北京市"
+                              },
+                              {
+                                "label": "重庆市",
+                                "value": "74",
+                                "children": [],
+                                "name": "重庆市"
+                              },
+                              {
+                                "label": "福建省",
+                                "value": "75",
+                                "name": "福建省",
+                                "children": []
+                              },
+                              {
+                                "label": "甘肃省",
+                                "value": "76",
+                                "name": "甘肃省",
+                                "children": []
+                              },
+                              {
+                                "label": "广东省",
+                                "value": "77",
+                                "name": "广东省",
+                                "children": []
+                              },
+                              {
+                                "label": "广西壮族自治区",
+                                "value": "78",
+                                "name": "广西壮族自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "贵州省",
+                                "value": "79",
+                                "name": "贵州省",
+                                "children": []
+                              },
+                              {
+                                "label": "海南省",
+                                "value": "80",
+                                "name": "海南省",
+                                "children": []
+                              },
+                              {
+                                "label": "河北省",
+                                "value": "81",
+                                "name": "河北省",
+                                "children": []
+                              },
+                              {
+                                "label": "河南省",
+                                "value": "82",
+                                "name": "河南省",
+                                "children": []
+                              },
+                              {
+                                "label": "黑龙江省",
+                                "value": "83",
+                                "name": "黑龙江省",
+                                "children": []
+                              },
+                              {
+                                "label": "湖北省",
+                                "value": "84",
+                                "name": "湖北省",
+                                "children": []
+                              },
+                              {
+                                "label": "湖南省",
+                                "value": "85",
+                                "name": "湖南省",
+                                "children": []
+                              },
+                              {
+                                "label": "吉林省",
+                                "value": "86",
+                                "name": "吉林省",
+                                "children": []
+                              },
+                              {
+                                "label": "江苏省",
+                                "value": "87",
+                                "name": "江苏省",
+                                "children": []
+                              },
+                              {
+                                "label": "江西省",
+                                "value": "88",
+                                "name": "江西省",
+                                "children": []
+                              },
+                              {
+                                "label": "辽宁省",
+                                "value": "89",
+                                "name": "辽宁省",
+                                "children": []
+                              },
+                              {
+                                "label": "内蒙古自治区",
+                                "value": "90",
+                                "name": "内蒙古自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "宁夏回族自治区",
+                                "value": "91",
+                                "name": "宁夏回族自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "青海省",
+                                "value": "92",
+                                "name": "青海省",
+                                "children": []
+                              },
+                              {
+                                "label": "陕西省",
+                                "value": "93",
+                                "name": "陕西省",
+                                "children": []
+                              },
+                              {
+                                "label": "上海市",
+                                "value": "94",
+                                "name": "上海市",
+                                "children": []
+                              },
+                              {
+                                "label": "山东省",
+                                "value": "95",
+                                "name": "山东省",
+                                "children": []
+                              },
+                              {
+                                "label": "山西省",
+                                "value": "96",
+                                "name": "山西省",
+                                "children": []
+                              },
+                              {
+                                "label": "四川省",
+                                "value": "97",
+                                "name": "四川省",
+                                "children": []
+                              },
+                              {
+                                "label": "天津市",
+                                "value": "98",
+                                "name": "天津市",
+                                "children": []
+                              },
+                              {
+                                "label": "西藏自治区",
+                                "value": "99",
+                                "name": "西藏自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "新疆维吾尔自治区",
+                                "value": "100",
+                                "name": "新疆维吾尔自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "云南省",
+                                "value": "101",
+                                "name": "云南省",
+                                "children": []
+                              },
+                              {
+                                "label": "浙江省",
+                                "value": "102",
+                                "name": "浙江省",
+                                "children": []
+                              }
+                            ],
+                            "name": "地方性法规"
+                          },
+                          {
+                            "label": "地方政府规章",
+                            "value": "103",
+                            "children": [
+                              {
+                                "label": "北京市",
+                                "value": "104",
+                                "children": [],
+                                "name": "北京市"
+                              },
+                              {
+                                "label": "重庆市",
+                                "value": "105",
+                                "children": [],
+                                "name": "重庆市"
+                              },
+                              {
+                                "label": "福建省",
+                                "value": "106",
+                                "name": "福建省",
+                                "children": []
+                              },
+                              {
+                                "label": "甘肃省",
+                                "value": "107",
+                                "name": "甘肃省",
+                                "children": []
+                              },
+                              {
+                                "label": "广东省",
+                                "value": "108",
+                                "name": "广东省",
+                                "children": []
+                              },
+                              {
+                                "label": "广西壮族自治区",
+                                "value": "109",
+                                "name": "广西壮族自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "贵州省",
+                                "value": "110",
+                                "name": "贵州省",
+                                "children": []
+                              },
+                              {
+                                "label": "海南省",
+                                "value": "111",
+                                "name": "海南省",
+                                "children": []
+                              },
+                              {
+                                "label": "河北省",
+                                "value": "112",
+                                "name": "河北省",
+                                "children": []
+                              },
+                              {
+                                "label": "河南省",
+                                "value": "113",
+                                "name": "河南省",
+                                "children": []
+                              },
+                              {
+                                "label": "黑龙江省",
+                                "value": "114",
+                                "name": "黑龙江省",
+                                "children": []
+                              },
+                              {
+                                "label": "湖北省",
+                                "value": "115",
+                                "name": "湖北省",
+                                "children": []
+                              },
+                              {
+                                "label": "湖南省",
+                                "value": "116",
+                                "name": "湖南省",
+                                "children": []
+                              },
+                              {
+                                "label": "吉林省",
+                                "value": "117",
+                                "name": "吉林省",
+                                "children": []
+                              },
+                              {
+                                "label": "江苏省",
+                                "value": "118",
+                                "name": "江苏省",
+                                "children": []
+                              },
+                              {
+                                "label": "江西省",
+                                "value": "119",
+                                "name": "江西省",
+                                "children": []
+                              },
+                              {
+                                "label": "辽宁省",
+                                "value": "120",
+                                "name": "辽宁省",
+                                "children": []
+                              },
+                              {
+                                "label": "内蒙古自治区",
+                                "value": "121",
+                                "name": "内蒙古自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "宁夏回族自治区",
+                                "value": "122",
+                                "name": "宁夏回族自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "青海省",
+                                "value": "123",
+                                "name": "青海省",
+                                "children": []
+                              },
+                              {
+                                "label": "陕西省",
+                                "value": "124",
+                                "name": "陕西省",
+                                "children": []
+                              },
+                              {
+                                "label": "上海市",
+                                "value": "125",
+                                "name": "上海市",
+                                "children": []
+                              },
+                              {
+                                "label": "山东省",
+                                "value": "126",
+                                "name": "山东省",
+                                "children": []
+                              },
+                              {
+                                "label": "山西省",
+                                "value": "127",
+                                "name": "山西省",
+                                "children": []
+                              },
+                              {
+                                "label": "四川省",
+                                "value": "128",
+                                "name": "四川省",
+                                "children": []
+                              },
+                              {
+                                "label": "天津市",
+                                "value": "129",
+                                "name": "天津市",
+                                "children": []
+                              },
+                              {
+                                "label": "西藏自治区",
+                                "value": "130",
+                                "name": "西藏自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "新疆维吾尔自治区",
+                                "value": "131",
+                                "name": "新疆维吾尔自治区",
+                                "children": []
+                              },
+                              {
+                                "label": "云南省",
+                                "value": "132",
+                                "name": "云南省",
+                                "children": []
+                              },
+                              {
+                                "label": "浙江省",
+                                "value": "133",
+                                "name": "浙江省",
+                                "children": []
+                              }
+                            ],
+                            "name": "地方政府规章"
+                          },
+                          {
+                            "label": "规范性文件",
+                            "value": "规范性文件",
+                            "name": "规范性文件",
+                            "children": [
+                              {
+                                "label": "全国性规范性文件",
+                                "value": "135",
+                                "name": "全国性规范性文件",
+                                "children": [
+                                  {
+                                    "label": "财政部",
+                                    "value": "136",
+                                    "name": "财政部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "工业和信息化部",
+                                    "value": "137",
+                                    "name": "工业和信息化部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家安全部",
+                                    "value": "138",
+                                    "name": "国家安全部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "交通运输部",
+                                    "value": "139",
+                                    "name": "交通运输部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "教育部",
+                                    "value": "140",
+                                    "name": "教育部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "科学技术部",
+                                    "value": "141",
+                                    "name": "科学技术部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "民政部",
+                                    "value": "142",
+                                    "name": "民政部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "农业农村部",
+                                    "value": "143",
+                                    "name": "农业农村部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "人力资源与社会保障部",
+                                    "value": "144",
+                                    "name": "人力资源与社会保障部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "商务部",
+                                    "value": "145",
+                                    "name": "商务部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "生态环境部",
+                                    "value": "146",
+                                    "name": "生态环境部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "水利部",
+                                    "value": "147",
+                                    "name": "水利部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "司法部",
+                                    "value": "148",
+                                    "name": "司法部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "外交部",
+                                    "value": "149",
+                                    "name": "外交部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "文化和旅游部",
+                                    "value": "150",
+                                    "name": "化和旅游部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "应急管理部",
+                                    "value": "151",
+                                    "name": "应急管理部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "中国人民银",
+                                    "value": "152",
+                                    "name": "中国人民银行",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "住房和城乡建设部",
+                                    "value": "153",
+                                    "name": "住房和城乡建设部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "自然资源部",
+                                    "value": "154",
+                                    "name": "自然资源部",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家广播电视总局",
+                                    "value": "155",
+                                    "name": "国家广播电视总局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家机关事务管理",
+                                    "value": "156",
+                                    "name": "国家机关事务管理",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家金融监督管理总局",
+                                    "value": "157",
+                                    "name": "国家金融监督管理总局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家粮食和物资储备局",
+                                    "value": "158",
+                                    "name": "国家粮食和物资储备局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家林业和草原局",
+                                    "value": "159",
+                                    "name": "国家林业和草原局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家市场监督管理总局",
+                                    "value": "160",
+                                    "name": "国家市场监督管理总局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家税务总局",
+                                    "value": "161",
+                                    "name": "国家税务总局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家体育总局",
+                                    "value": "162",
+                                    "name": "国家体育总局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家铁路局",
+                                    "value": "163",
+                                    "name": "国家铁路局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家统计局",
+                                    "value": "164",
+                                    "name": "国家统计局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家医疗保障局",
+                                    "value": "165",
+                                    "name": "国家医疗保障局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家移民管理局",
+                                    "value": "166",
+                                    "name": "国家移民管理局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家知识产权局",
+                                    "value": "167",
+                                    "name": "国家知识产权局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "中国数据局",
+                                    "value": "168",
+                                    "name": "中国数据局",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家国际发展合作署",
+                                    "value": "169",
+                                    "name": "国家国际发展合作署",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "海关总署",
+                                    "value": "170",
+                                    "name": "海关总署",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "审计署",
+                                    "value": "171",
+                                    "name": "审计署",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家发展和改革委员会",
+                                    "value": "172",
+                                    "name": "国家发展和改革委员会",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国家卫生健康委员会",
+                                    "value": "173",
+                                    "name": "国家卫生健康委员会",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国有资产监督管理委员会",
+                                    "value": "174",
+                                    "name": "国有资产监督管理委员会",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "中国银行保险监督管理委员会",
+                                    "value": "175",
+                                    "name": "中国银行保险监督管理委员会",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "中国证券监督管理委员会",
+                                    "value": "176",
+                                    "name": "中国证券监督管理委员会",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "中国人民银行",
+                                    "value": "176",
+                                    "name": "中国人民银行",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "国务院",
+                                    "value": "177",
+                                    "name": "国务院",
+                                    "children": []
+                                  }
+                                ]
+                              },
+                              {
+                                "label": "地方性规范性文件",
+                                "value": "178",
+                                "name": "地方性规范性文件",
+                                "children": [
+                                  {
+                                    "label": "北京市",
+                                    "value": "179",
+                                    "name": "北京市",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "重庆市",
+                                    "value": "180",
+                                    "name": "重庆市",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "福建省",
+                                    "value": "181",
+                                    "name": "福建省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "甘肃省",
+                                    "value": "182",
+                                    "name": "甘肃省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "广东省",
+                                    "value": "183",
+                                    "name": "广东省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "广西壮族自治区",
+                                    "value": "184",
+                                    "name": "广西壮族自治区",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "贵州省",
+                                    "value": "185",
+                                    "name": "贵州省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "海南省",
+                                    "value": "186",
+                                    "name": "海南省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "河北省",
+                                    "value": "187",
+                                    "name": "河北省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "河南省",
+                                    "value": "188",
+                                    "name": "河南省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "黑龙江省",
+                                    "value": "189",
+                                    "name": "黑龙江省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "湖北省",
+                                    "value": "190",
+                                    "name": "湖北省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "湖南省",
+                                    "value": "191",
+                                    "name": "湖南省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "吉林省",
+                                    "value": "192",
+                                    "name": "吉林省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "江苏省",
+                                    "value": "193",
+                                    "name": "江苏省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "江西省",
+                                    "value": "194",
+                                    "name": "江西省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "辽宁省",
+                                    "value": "195",
+                                    "name": "辽宁省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "内蒙古自治区",
+                                    "value": "196",
+                                    "name": "内蒙古自治区",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "宁夏回族自治区",
+                                    "value": "197",
+                                    "name": "宁夏回族自治区",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "青海省",
+                                    "value": "198",
+                                    "name": "青海省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "陕西省",
+                                    "value": "199",
+                                    "name": "陕西省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "上海市",
+                                    "value": "200",
+                                    "name": "上海市",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "山东省",
+                                    "value": "201",
+                                    "name": "山东省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "山西省",
+                                    "value": "202",
+                                    "name": "山西省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "四川省",
+                                    "value": "203",
+                                    "name": "四川省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "天津市",
+                                    "value": "204",
+                                    "name": "天津市",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "西藏自治区",
+                                    "value": "205",
+                                    "name": "西藏自治区",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "新疆维吾尔自治区",
+                                    "value": "206",
+                                    "name": "新疆维吾尔自治区",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "云南省",
+                                    "value": "94",
+                                    "name": "云南省",
+                                    "children": []
+                                  },
+                                  {
+                                    "label": "浙江省",
+                                    "value": "208",
+                                    "name": "浙江省",
+                                    "children": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "showIcon": false,
+                        "initiallyOpen": false,
+                        "id": "anyou_select_id",
+                        "clearable": false,
+                        "multiple": false,
+                        "enableNodePath": false,
+                        "unfoldedLevel": 1,
+                        "menuTpl": ""
+                      }
+                    ],
+                    "strictMode": true,
+                    "syncFields": [],
+                    "size": "full",
+                    "name": "combo1",
+                    "validateOnChange": false,
+                    "mode": "horizontal",
+                    "id": "u:8b1de3f6c4e3"
+                  }
+                ],
+                "style": {
+                  "margin-bottom": "0px",
+                  "padding-bottom": "0px",
+                  "position": "static",
+                  "display": "block",
+                  "fontFamily": "",
+                  "fontSize": 12
+                },
+                "id": "u:96455272de9b",
+                "isFixedHeight": false,
+                "isFixedWidth": false
+              },
+              {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "combo",
+                    "items": [
+                      {
+                        "type": "tree-select",
+                        "showIcon": false,
+                        "label": "治理场景",
+                        "name": "scenario_select",
+                        "id": "procedure_select_id",
+                        "options": [
+                          {
+                            "label": "城市管理",
+                            "children": [
+                              {
+                                "children": [],
+                                "value": "210",
+                                "label": "城市环境与卫生",
+                                "name": "城市环境与卫生"
+                              },
+                              {
+                                "children": [],
+                                "value": "211",
+                                "label": "城市交通运输",
+                                "name": "城市交通运输"
+                              },
+                              {
+                                "children": [],
+                                "value": "212",
+                                "label": "文明行为促进",
+                                "name": "文明行为促进"
+                              },
+                              {
+                                "children": [],
+                                "value": "213",
+                                "label": "住房保障",
+                                "name": "住房保障"
+                              }
+                            ],
+                            "value": "城市管理",
+                            "name": "城市管理"
+                          },
+                          {
+                            "label": "市场监管",
+                            "children": [
+                              {
+                                "value": "215",
+                                "label": "安全生产",
+                                "name": "安全生产",
+                                "children": []
+                              },
+                              {
+                                "value": "216",
+                                "label": "市场准入",
+                                "name": "市场准入",
+                                "children": []
+                              },
+                              {
+                                "children": [],
+                                "value": "217",
+                                "label": "产品质量与安全",
+                                "name": "产品质量与安全"
+                              },
+                              {
+                                "value": "218",
+                                "label": "竞争行为规制",
+                                "name": "竞争行为规制",
+                                "children": []
+                              },
+                              {
+                                "children": [],
+                                "value": "219",
+                                "label": "消费者保护",
+                                "name": "消费者保护"
+                              },
+                              {
+                                "children": [],
+                                "value": "220",
+                                "label": "金融市场监管",
+                                "name": "金融市场监管"
+                              },
+                              {
+                                "children": [],
+                                "value": "221",
+                                "label": "科技创新",
+                                "name": "科技创新"
+                              },
+                              {
+                                "children": [],
+                                "value": "222",
+                                "label": "知识产权保护",
+                                "name": "知识产权保护"
+                              },
+                              {
+                                "value": "223",
+                                "label": "劳动者保护",
+                                "name": "劳动者保护",
+                                "children": []
+                              },
+                              {
+                                "children": [],
+                                "value": "224",
+                                "label": "环境与生态保护",
+                                "name": "环境与生态保护"
+                              },
+                              {
+                                "label": "社会保险",
+                                "value": "225",
+                                "name": "社会保险",
+                                "children": []
+                              },
+                              {
+                                "label": "产业促进",
+                                "value": "226",
+                                "name": "产业促进",
+                                "children": []
+                              }
+                            ],
+                            "value": "市场监管",
+                            "name": "市场监管"
+                          },
+                          {
+                            "children": [
+                              {
+                                "value": "228",
+                                "label": "老年人保护",
+                                "name": "老年人保护",
+                                "children": []
+                              },
+                              {
+                                "value": "229",
+                                "label": "平安乡村",
+                                "name": "平安乡村",
+                                "children": []
+                              },
+                              {
+                                "children": [],
+                                "value": "230",
+                                "label": "社区矫正",
+                                "name": "社区矫正"
+                              },
+                              {
+                                "value": "231",
+                                "label": "未成年人保护",
+                                "name": "未成年人保护",
+                                "children": []
+                              },
+                              {
+                                "children": [],
+                                "value": "232",
+                                "label": "文明乡村",
+                                "name": "文明乡村"
+                              },
+                              {
+                                "children": [],
+                                "value": "233",
+                                "label": "吸毒人员管理",
+                                "name": "吸毒人员管理"
+                              },
+                              {
+                                "children": [],
+                                "value": "234",
+                                "label": "刑满释放人员管理",
+                                "name": "刑满释放人员管理"
+                              },
+                              {
+                                "value": "235",
+                                "label": "治安管理",
+                                "name": "治安管理",
+                                "children": []
+                              }
+                            ],
+                            "label": "平安建设",
+                            "value": "平安建设",
+                            "name": "平安建设"
+                          }
+                        ],
+                        "themeCss": {
+                          "labelClassName": {
+                            "font:default": {
+                              "color": "rgb(5,24,82)"
+                            }
+                          }
+                        },
+                        "clearable": false,
+                        "multiple": false,
+                        "enableNodePath": false,
+                        "initiallyOpen": true
+                      }
+                    ],
+                    "strictMode": true,
+                    "syncFields": [],
+                    "size": "full",
+                    "name": "combo2",
+                    "validateOnChange": false,
+                    "mode": "horizontal",
+                    "id": "u:3f59aa265164"
+                  }
+                ],
+                "style": {
+                  "margin-top": "0px",
+                  "padding-top": "3px",
+                  "margin-bottom": "0px",
+                  "padding-bottom": "0px",
+                  "position": "static",
+                  "display": "block",
+                  "fontFamily": "",
+                  "fontSize": 12
+                },
+                "id": "u:0803673b84c4",
+                "isFixedHeight": false,
+                "isFixedWidth": false
+              },
+              {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "combo",
+                    "name": "combo3",
+                    "items": [
+                      {
+                        "type": "input-text",
+                        "label": "制定机关",
+                        "name": "enacting_body_input",
+                        "themeCss": {
+                          "labelClassName": {
+                            "font:default": {
+                              "color": "rgb(5,24,82)"
+                            },
+                            "text:default": {
+                              "letter-spacing": "1.3px"
+                            }
+                          }
+                        },
+                        "id": "person_select_id",
+                        "multiple": false,
+                        "horizontal": {
+                          "left": 1,
+                          "right": 11
+                        },
+                        "clearable": false
+                      }
+                    ],
+                    "strictMode": true,
+                    "syncFields": [],
+                    "size": "full",
+                    "validateOnChange": false,
+                    "mode": "horizontal",
+                    "id": "u:77918518307f"
+                  }
+                ],
+                "style": {
+                  "margin-top": "0px",
+                  "padding-top": "3px",
+                  "margin-bottom": "0px",
+                  "padding-bottom": "0px",
+                  "position": "static",
+                  "display": "block",
+                  "fontFamily": "",
+                  "fontSize": 12
+                },
+                "id": "u:579e89aabd7f",
+                "isFixedHeight": false,
+                "isFixedWidth": false
+              },
+              {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "combo",
+                    "name": "combo4",
+                    "items": [
+                      {
+                        "type": "input-date-range",
+                        "label": "公布时间",
+                        "name": "publication_date_select",
+                        "id": "date_select_id",
+                        "themeCss": {
+                          "labelClassName": {
+                            "font:default": {
+                              "color": "rgb(5,24,82)"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "strictMode": true,
+                    "syncFields": [],
+                    "size": "full",
+                    "validateOnChange": false,
+                    "mode": "horizontal",
+                    "id": "u:ccf06a4c2f4d"
+                  }
+                ],
+                "style": {
+                  "margin-top": "0px",
+                  "padding-top": "3px",
+                  "margin-bottom": "0px",
+                  "padding-bottom": "0px",
+                  "position": "static",
+                  "display": "block",
+                  "fontFamily": "",
+                  "fontSize": 12
+                },
+                "id": "u:344f6954befb",
+                "isFixedHeight": false,
+                "isFixedWidth": false
+              },
+              {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "combo",
+                    "name": "combo5",
+                    "items": [
+                      {
+                        "type": "input-date-range",
+                        "label": "施行时间",
+                        "name": "effective_date_select",
+                        "id": "date_select_id",
+                        "themeCss": {
+                          "labelClassName": {
+                            "font:default": {
+                              "color": "rgb(5,24,82)"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "strictMode": true,
+                    "syncFields": [],
+                    "size": "full",
+                    "validateOnChange": false,
+                    "mode": "horizontal",
+                    "id": "u:fe12101fc62f"
+                  }
+                ],
+                "style": {
+                  "margin-top": "0px",
+                  "padding-top": "3px",
+                  "margin-bottom": "0px",
+                  "padding-bottom": "0px",
+                  "position": "static",
+                  "display": "block",
+                  "fontFamily": "",
+                  "fontSize": 12
+                },
+                "id": "u:e541b4219ddb",
+                "isFixedHeight": false,
+                "isFixedWidth": false
+              },
+              {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "button",
+                    "label": "检索",
+                    "onEvent": {
+                      "click": {
+                        "actions": [
+                          {
+                            "actionType": "setValue",
+                            "componentId": "outer",
+                            "args": {
+                              "value": {
+                                "content": "${content}",
+                                "grade": "${combo1.grade_select}",
+                                "enacting_body": "${combo3.enacting_body}",
+                                "scenario": "${combo2.scenario_select}",
+                                "effective_date": "${combo5.effective_date_select}",
+                                "publication_date": "${combo4.publication_date_select}"
+                              }
+                            }
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service02"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service01"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "service00"
+                          },
+                          {
+                            "actionType": "reload",
+                            "componentId": "collapse000"
+                          }
+                        ]
+                      }
+                    },
+                    "block": true,
+                    "themeCss": {
+                      "className": {
+                        "font:default": {
+                          "color": "white",
+                          "fontWeight": "var(--fonts-weight-3)"
+                        },
+                        "background:default": "rgba(5,24,82,0.9)",
+                        "font:hover": {
+                          "fontWeight": "var(--fonts-weight-3)"
+                        },
+                        "radius:default": {
+                          "top-left-border-radius": "var(--borders-radius-1)",
+                          "top-right-border-radius": "var(--borders-radius-1)",
+                          "bottom-left-border-radius": "var(--borders-radius-1)",
+                          "bottom-right-border-radius": "var(--borders-radius-1)"
+                        },
+                        "radius:hover": {
+                          "top-left-border-radius": "var(--borders-radius-1)",
+                          "top-right-border-radius": "var(--borders-radius-1)",
+                          "bottom-left-border-radius": "var(--borders-radius-1)",
+                          "bottom-right-border-radius": "var(--borders-radius-1)"
+                        },
+                        "radius:active": {
+                          "top-left-border-radius": "var(--borders-radius-1)",
+                          "top-right-border-radius": "var(--borders-radius-1)",
+                          "bottom-left-border-radius": "var(--borders-radius-1)",
+                          "bottom-right-border-radius": "var(--borders-radius-1)"
+                        }
+                      }
+                    },
+                    "id": "u:0ca7a149cc9a"
+                  }
+                ],
+                "style": {
+                  "margin-top": "20px",
+                  "padding-top": "0px",
+                  "margin-bottom": "0px",
+                  "padding-bottom": "0px",
+                  "position": "static",
+                  "display": "block",
+                  "fontFamily": "",
+                  "fontSize": 12
+                },
+                "id": "u:84fcfea3a3ca",
+                "isFixedHeight": false,
+                "isFixedWidth": false
+              },
+              {
+                "type": "wrapper",
+                "body": [
+                  {
+                    "type": "button",
+                    "label": "重置",
+                    "onEvent": {
+                      "click": {
+                        "actions": [
+                          {
+                            "actionType": "reset",
+                            "componentId": "case_name_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "anyou_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "court_name_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "case_no_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "type_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "court_level_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "article_type_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "procedure_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "person_select_id"
+                          },
+                          {
+                            "actionType": "reset",
+                            "componentId": "law_article_select_id"
+                          },
+                          {
+                            "actionType": "clear",
+                            "componentId": "date_select_id"
+                          }
+                        ]
+                      }
+                    },
+                    "block": true,
+                    "themeCss": {
+                      "className": {
+                        "font:default": {
+                          "color": "rgb(5,24,82)",
+                          "fontWeight": "var(--fonts-weight-3)"
+                        },
+                        "background:default": "var(--colors-neutral-fill-11)",
+                        "font:hover": {
+                          "fontWeight": "var(--fonts-weight-3)"
+                        },
+                        "background:hover": "var(--colors-neutral-fill-11)",
+                        "border:default": {
+                          "top-border-style": "var(--borders-style-2)",
+                          "left-border-style": "var(--borders-style-2)",
+                          "right-border-style": "var(--borders-style-2)",
+                          "bottom-border-style": "var(--borders-style-2)",
+                          "top-border-color": "rgb(5,24,82)",
+                          "left-border-color": "rgb(5,24,82)",
+                          "right-border-color": "rgb(5,24,82)",
+                          "bottom-border-color": "rgb(5,24,82)",
+                          "top-border-width": "var(--borders-width-3)",
+                          "left-border-width": "var(--borders-width-3)",
+                          "right-border-width": "var(--borders-width-3)",
+                          "bottom-border-width": "var(--borders-width-3)"
+                        },
+                        "radius:default": {
+                          "top-left-border-radius": "var(--borders-radius-1)",
+                          "top-right-border-radius": "var(--borders-radius-1)",
+                          "bottom-left-border-radius": "var(--borders-radius-1)",
+                          "bottom-right-border-radius": "var(--borders-radius-1)"
+                        },
+                        "radius:hover": {
+                          "top-left-border-radius": "var(--borders-radius-1)",
+                          "top-right-border-radius": "var(--borders-radius-1)",
+                          "bottom-left-border-radius": "var(--borders-radius-1)",
+                          "bottom-right-border-radius": "var(--borders-radius-1)"
+                        },
+                        "radius:active": {
+                          "top-left-border-radius": "var(--borders-radius-1)",
+                          "top-right-border-radius": "var(--borders-radius-1)",
+                          "bottom-left-border-radius": "var(--borders-radius-1)",
+                          "bottom-right-border-radius": "var(--borders-radius-1)"
+                        }
+                      }
+                    },
+                    "id": "u:8ac3f84269e5"
+                  }
+                ],
+                "style": {
+                  "margin-top": "5px",
+                  "padding-top": "0px",
+                  "margin-bottom": "20px",
+                  "padding-bottom": "20px"
+                },
+                "id": "u:c1158248e4fe"
+              }
+            ],
+            "style": {
+              "position": "static",
+              "display": "block",
+              "width": "79%",
+              "margin": "auto",
+              "background-color": "white",
+              "fontFamily": "",
+              "fontSize": 12
+            },
+            "size": "none",
+            "wrapperBody": false,
+            "hiddenOn": "${!state}",
+            "isFixedHeight": false,
+            "isFixedWidth": false
+          },
+          {
+            "type": "container",
+            "style": {
+              "width": "100%",
+              "display": "block",
+              "position": "static"
+            },
+            "body": [
+              {
+                "type": "grid",
+                "columns": [
+                  {
+                    "md": 3,
+                    "body": [
+                      {
+                        "type": "wrapper",
+                        "style": {
+                          "backgroundColor": "rgb(246,116,30)",
+                          "paddingTop": "3px",
+                          "paddingBottom": "3px",
+                          "position": "static",
+                          "display": "block",
+                          "fontFamily": "",
+                          "fontSize": 12
+                        },
+                        "id": "u:98d70d1ec5a4",
+                        "isFixedHeight": false,
+                        "isFixedWidth": false
+                      },
+                      {
+                        "type": "service",
+                        "id": "service02",
+                        "api": {
+                          "method": "post",
+                          "url": xy_flask_url + "/index",
+                          "data": {
+                            "effective_date": "${effective_date}",
+                            "publication_date": "${publication_date}",
+                            "enacting_body": "${enacting_body}",
+                            "content": "${content}",
+                            "grade": "${grade}",
+                            "scenario": "${scenario}",
+                            "competent_authority": "${competent_authority}",
+                            "agency_bank": "${agency_bank}",
+                            "province": "${province}",
+                            "local_nation": "${local_nation}"
+                          },
+                          "requestAdaptor": "",
+                          "adaptor": "",
+                          "messages": {}
+                        },
+                        "style": {
+                          "backgroundColor": "white",
+                          "padding": "0px"
+                        },
+                        "body": [
+                          {
+                            "type": "collapse-group",
+                            "id": "collapse000",
+                            "style": {
+                              "height": "700px"
+                            },
+                            "expandIconPosition": "right",
+                            "body": [
+                              {
+                                "type": "collapse",
+                                "key": "1",
+                                "header": "效力位阶",
+                                "body": [
+                                  {
+                                    "type": "input-tree",
+                                    "name": "efficacy_hierarchy-tree",
+                                    "onEvent": {
+                                      "change": {
+                                        "actions": [
+                                          {
+                                            "actionType": "setValue",
+                                            "componentId": "outer",
+                                            "args": {
+                                              "value": {
+                                                "grade": "${value}",
+                                                "competent_authority": "${aggregations.efficacy_hierarchy[1][children].name}"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "actionType": "reload",
+                                            "componentId": "service02"
+                                          },
+                                          {
+                                            "actionType": "reload",
+                                            "componentId": "service01"
+                                          },
+                                          {
+                                            "actionType": "reload",
+                                            "componentId": "service00"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "showIcon": false,
+                                    "initiallyOpen": false,
+                                    "source": "${aggregations.efficacy_hierarchy}",
+                                    "id": "u:846f8e8877fe",
+                                    "multiple": false,
+                                    "enableNodePath": false,
+                                    "hideRoot": true,
+                                    "unfoldedLevel": 1
+                                  }
+                                ],
+                                "id": "u:b74e693230a5"
+                              },
+                              {
+                                "type": "collapse",
+                                "key": "2",
+                                "header": "治理场景",
+                                "body": [
+                                  {
+                                    "type": "input-tree",
+                                    "name": "anyou-tree",
+                                    "onEvent": {
+                                      "change": {
+                                        "actions": [
+                                          {
+                                            "actionType": "setValue",
+                                            "componentId": "outer",
+                                            "args": {
+                                              "value": {
+                                                "scenario": "${value}"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "actionType": "reload",
+                                            "componentId": "service02"
+                                          },
+                                          {
+                                            "actionType": "reload",
+                                            "componentId": "service01"
+                                          },
+                                          {
+                                            "actionType": "reload",
+                                            "componentId": "service00"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "showIcon": false,
+                                    "initiallyOpen": false,
+                                    "source": "${aggregations.governance_scenario}",
+                                    "id": "u:196daf1fc8e8",
+                                    "multiple": false,
+                                    "enableNodePath": false,
+                                    "hideRoot": true,
+                                    "unfoldedLevel": 1
+                                  }
+                                ],
+                                "id": "u:b5d42b8d0537"
+                              }
+                            ],
+                            "activeKey": []
+                          }
+                        ],
+                        "dsType": "api"
+                      }
+                    ],
+                    "id": "u:17d8003530a9"
+                  },
+                  {
+                    "md": 9,
+                    "body": [
+                      {
+                        "type": "wrapper",
+                        "style": {
+                          "backgroundColor": "rgb(246,116,30)",
+                          "paddingTop": "3px",
+                          "paddingBottom": "3px",
+                          "position": "static",
+                          "display": "block",
+                          "fontFamily": "",
+                          "fontSize": 12
+                        },
+                        "id": "u:a1b0428ebe98",
+                        "isFixedHeight": false,
+                        "isFixedWidth": false
+                      },
+                      {
+                        "type": "service",
+                        "name": "tags_service",
+                        "id": "service01",
+                        "style": {
+                          "backgroundColor": "white",
+                          "paddingTop": "20px",
+                          "paddingBottom": "20px",
+                          "paddingLeft": "25px"
+                        },
+                        "schemaApi": {
+                          "method": "post",
+                          "url": xy_flask_url + "/tags",
+                          "data": {
+                            "content": "${content}",
+                            "enacting_body": "${enacting_body}",
+                            "grade": "${grade}",
+                            "scenario": "${scenario}",
+                            "city_management": "${city_management}",
+                            "safety_construction": "${safety_construction}",
+                            "local_nation": "${local_nation}",
+                            "province": "${province}",
+                            "agency_bank": "${agency_bank}",
+                            "competent_authority": "${competent_authority}",
+                            "publication_date": "${publication_date}",
+                            "effective_date": "${effective_date}"
+                          },
+                          "requestAdaptor": "",
+                          "adaptor": "",
+                          "messages": {}
+                        },
+                        "dsType": "api",
+                        "initFetchSchema": false
+                      },
+                      {
+                        "type": "service",
+                        "id": "service00",
+                        "api": {
+                          "method": "post",
+                          "url": xy_flask_url + "/page",
+                          "data": {
+                            "from": "${(page-1)*10}",
+                            "sort": "${sort}",
+                            "content": "${content}",
+                            "effective_date": "${effective_date}",
+                            "publication_date": "${publication_date}",
+                            "enacting_body": "${enacting_body}",
+                            "grade": "${grade}",
+                            "scenario": "${scenario}"
+                          },
+                          "requestAdaptor": "",
+                          "adaptor": "",
+                          "messages": {}
+                        },
+                        "body": [
+                          {
+                            "type": "wrapper",
+                            "style": {
+                              "backgroundColor": "white",
+                              "paddingBottom": "0px",
+                              "paddingTop": "0px",
+                              "position": "static",
+                              "display": "block",
+                              "fontFamily": "",
+                              "fontSize": 12
+                            },
+                            "body": [
+                              {
+                                "type": "grid",
+                                "columns": [
+                                  {
+                                    "body": [
+                                      {
+                                        "type": "select",
+                                        "className": "w-ssm m-none p-none",
+                                        "value": "00",
+                                        "options": [
+                                          {
+                                            "label": "默认排序",
+                                            "value": "00"
+                                          },
+                                          {
+                                            "label": "公布时间最近",
+                                            "value": "01"
+                                          },
+                                          {
+                                            "label": "相关度",
+                                            "value": "02"
+                                          }
+                                        ],
+                                        "onEvent": {
+                                          "change": {
+                                            "actions": [
+                                              {
+                                                "actionType": "setValue",
+                                                "componentId": "outer",
+                                                "args": {
+                                                  "value": {
+                                                    "sort": "${value}",
+                                                    "page": 1
+                                                  }
+                                                }
+                                              },
+                                              {
+                                                "actionType": "reload",
+                                                "componentId": "service00"
+                                              }
+                                            ]
+                                          }
+                                        },
+                                        "name": "order_select",
+                                        "id": "u:e62e968d8dd7",
+                                        "multiple": false
+                                      }
+                                    ],
+                                    "id": "u:3bcbe847ca4a"
+                                  },
+                                  {
+                                    "body": [
+                                      {
+                                        "type": "wrapper",
+                                        "id": "total",
+                                        "style": {
+                                          "margin": "0px",
+                                          "padding": "2px 0",
+                                          "position": "absolute",
+                                          "right": "15px",
+                                          "color": "grey",
+                                          "inset": "auto",
+                                          "display": "block",
+                                          "fontFamily": "",
+                                          "fontSize": 12
+                                        },
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "tpl": "累计${hits.total}条",
+                                            "wrapperComponent": "",
+                                            "inline": false,
+                                            "id": "u:4c4fe4b08ef6"
+                                          }
+                                        ],
+                                        "originPosition": "right-bottom",
+                                        "isFixedHeight": false,
+                                        "isFixedWidth": false
+                                      }
+                                    ],
+                                    "id": "u:d5f59ca2cd19"
+                                  }
+                                ],
+                                "id": "u:9aaf07a6cde1"
+                              }
+                            ],
+                            "id": "u:e63ef54dee37",
+                            "isFixedHeight": false,
+                            "isFixedWidth": false
+                          },
+                          {
+                            "type": "wrapper",
+                            "style": {
+                              "height": "560px",
+                              "overflowY": "auto",
+                              "padding": "0px",
+                              "margin": "0px",
+                              "position": "static",
+                              "display": "block",
+                              "fontFamily": "",
+                              "fontSize": 12
+                            },
+                            "body": [
+                              {
+                                "type": "table",
+                                "source": "${hits.hits}",
+                                "onEvent": {
+                                  "rowClick": {
+                                    "actions": [
+                                      {
+                                        "actionType": "url",
+                                        "args": {
+                                          "url": xy_amis_url + "/pages/case.html",
+                                          "blank": false,
+                                          "params": {
+                                            "case_id": "${item._id}"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                },
+                                "columns": [
+                                  {
+                                    "type": "card",
+                                    "value": "${_id}",
+                                    "header": {
+                                      "title": "${_source.title}",
+                                      "titleClassName": "font-bold"
+                                    },
+                                    "body": [
+                                      {
+                                        "type": "wrapper",
+                                        "style": {
+                                          "padding": "0px",
+                                          "margin": "0px",
+                                          "position": "static",
+                                          "display": "block",
+                                          "fontFamily": "",
+                                          "fontSize": 12
+                                        },
+                                        "body": [
+                                          {
+                                            "type": "tpl",
+                                            "id": "u:80e734afd711",
+                                            "tpl": "<span style=\"margin-right: 20px;margin-left:0px;padding-left:0px\">${_source.enacting_body}</span><span style=\"margin-right: 20px;\">${_source.publication_date}</span><span style=\"margin-right: 20px;\">${_source.effective_date}</span>",
+                                            "wrapperComponent": "",
+                                            "inline": false
+                                          }
+                                        ],
+                                        "id": "u:06465338eee3",
+                                        "label": "",
+                                        "isFixedHeight": false,
+                                        "isFixedWidth": false
+                                      },
+                                      {
+                                        "type": "divider",
+                                        "id": "u:34e5f30db5e1"
+                                      },
+                                      {
+                                        "type": "tpl",
+                                        "tpl": "${_source.s26}",
+                                        "wrapperComponent": "",
+                                        "inline": false,
+                                        "id": "u:f65575594eb9"
+                                      }
+                                    ],
+                                    "toolbar": [],
+                                    "id": "u:6f10fa191c32",
+                                    "className": "no-bg",
+                                    "placeholder": "-"
+                                  }
+                                ],
+                                "id": "u:848c3efeed4c"
+                              }
+                            ],
+                            "id": "u:f0e21da9e755",
+                            "isFixedHeight": false,
+                            "isFixedWidth": false
+                          },
+                          {
+                            "type": "wrapper",
+                            "style": {
+                              "backgroundColor": "white",
+                              "paddingTop": "0px",
+                              "paddingLeft": "600px",
+                              "paddingRight": "0px",
+                              "paddingBottom": "0px",
+                              "margin": "0px"
+                            },
+                            "body": [
+                              {
+                                "type": "grid",
+                                "gap": "xs",
+                                "columns": [
+                                  //当前
+                                  {
+                                    // "md":3,
+                                    "body": "<p style=\"color:black;font-weight:bold\">第${page}页",
+                                    "id": "u:10733a27e64a"
+                                  },
+                                  //上一页
+                                  {
+                                    // "md":2,
+                                    "body": {
+                                      "type": "tpl",
+                                      "tpl": "<p style=\"marging:0px;padding:0px;color:black;font-weight:bold\">上一页",
+                                      "onEvent": {
+                                        "click": {
+                                          "actions": [
+                                            {
+                                              "actionType": "setValue",
+                                              "componentId": "outer",
+                                              "args": {
+                                                "value": {
+                                                  "page": "${IF(page-1<1,1,page-1)}"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "actionType": "reload",
+                                              "componentId": "service00"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "id": "u:d37db19a95ab"
+                                    },
+                                    "id": "u:1bf3292412b8"
+                                  },
+                                  //下一页
+                                  {
+                                    // "md":2,
+                                    "body": {
+                                      "type": "tpl",
+                                      "tpl": "<p style=\"marging:0px;padding:0px;color:black;;font-weight:bold\">下一页",
+                                      "onEvent": {
+                                        "click": {
+                                          "actions": [
+                                            {
+                                              "actionType": "setValue",
+                                              "componentId": "outer",
+                                              "args": {
+                                                "value": {
+                                                  "page": "${IF(10*page<hits.total,page+1,page)}"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "actionType": "reload",
+                                              "componentId": "service00"
+                                            }
+                                          ]
+                                        }
+                                      },
+                                      "id": "u:9ea42cd6f484"
+                                    },
+                                    "id": "u:df149308d56a"
+                                  },
+                                  {
+                                    "md": 9,
+                                    "id": "u:bb831b944b69"
+                                  }
+                                ],
+                                "id": "u:72604b63065c"
+                              }
+                            ],
+                            "id": "u:f342928a3711"
+                          }
+                        ],
+                        "dsType": "api"
+                      }
+                    ],
+                    "id": "u:9907c6a7176a"
+                  }
+                ],
+                "id": "u:c905d671b39a"
+              }
+            ],
+            "themeCss": {
+              "baseControlClassName": {
+                "padding-and-margin:default": {
+                  "margin": "auto",
+                  "marginTop": "20px"
+                }
+              }
+            },
+            "id": "u:6f9e595d6e41",
+            "isFixedHeight": false,
+            "isFixedWidth": false
+          }
+        ],
+        "id": "outer",
+        "data": {
+          "state": false,
+          "page": 1,
+          "sort": "00",
+          "effective_date": "",
+          "publication_date": "",
+          "efficacy_hierarchy": "",
+          "governance_scenario": "",
+          "enacting_body": "",
+          "content": ""
+        },
+        "style": {
+          "position": "static",
+          "display": "block",
+          "backgroundColor": "rgb(27,41,72)",
+          "backgroundRepeat": "no-repeat",
+          "backgroundSize": "100% 100%"
+        },
+        "wrapperBody": false,
+        "isFixedHeight": false,
+        "isFixedWidth": false,
+        "asideResizor": false,
+        "pullRefresh": {
+          "disabled": true
+        }
+      };
+      let amisScoped = amis.embed('#root', amisJSON);
+    })();
+  </script>
+</body>
+
+</html>
