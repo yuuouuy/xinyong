@@ -43,7 +43,7 @@ http://localhost/signin
 - 用户名：`739499915@qq.com`
 - 密码：`a12345678`
 
-![image-20250526170600153](../xy_code/assets/image-a.png)
+![image-20250526170600153](../../xy_code/assets/image-a.png)
 
 登录后点击顶部的「工作室」，选择：
 
