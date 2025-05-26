@@ -169,6 +169,7 @@
 ![image-20250526054534213](./xy_code/assets/image11.png)
 
 ### 3️⃣ 智能分析
+![image12](./xy_code/assets/image12.png)
 
 ## 五、快速启动指南
 
