@@ -28,7 +28,7 @@
 
 ​       本系统采用前后端分离架构，结合 Flask 微服务框架与 Amis 可视化页面构建工具，构建了一个可扩展、易部署、逻辑清晰的治理决策与预警平台。系统整体架构分为三个核心层次：**视图层、服务层、数据层**，并通过 **Nginx 进行跨域请求调度**。
 
-![image-20250526034647234](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526034647234.png)
+![image-20250526034647234](./xy_code/assets/image01.png)
 
 ### 1️⃣ 视图层
 
@@ -85,7 +85,7 @@
 
 ​        如下图所示，系统各服务模块间调用关系清晰、职责分明。前端 Amis 页面通过用户操作发起请求，由后端的 Base 服务统一接收并进行调度。根据请求的具体类型，Base 服务会调用不同的后端组件：当需要执行法规案例的搜索与筛选时，系统将访问 Elasticsearch，完成全文检索与排序逻辑；当涉及到多轮对话、用户历史信息管理等功能时，系统通过 Redis 进行上下文的读写与缓存优化；若请求内容为智能问答或法条分析，则由 Base 服务将数据转发至 AI 服务模块，由其完成基于大语言模型的处理。所有服务调用最终均由 Base 服务汇总结果，并返回给前端进行展示与交互。
 
-![image-20250526035446876](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526035446876.png)
+![image-20250526035446876](./xy_code/assets/image02.png)
 
 
 
@@ -93,7 +93,7 @@
 
 ​	    本系统命名为**“社会信用治理决策支持与风险预警系统”**，旨在为社会治理相关场景提供智能化的法律法规检索服务与多轮对话交互支持，提升决策效率和风险响应能力。系统整体可分为两大核心模块：**<u>法规案例检索模块</u>**与**<u>智能分析模块</u>**，具体功能结构如下图所示：
 
-![需求架构图](C:\Users\yuyu\Downloads\需求架构图.png)
+![需求架构图](./xy_code/assets/image03.png)
 
 ### 1️⃣ 法规案例检索模块
 
@@ -122,7 +122,7 @@
 
 ​	    主页主要是欢迎页，设置导航栏，可自由选择法规案例检索或智能分析。
 
-![image-20250526044717820](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526044717820.png)
+![image-20250526044717820](./xy_code/assets/image04.png)
 
 ### 2️⃣ 法规案例检索
 
@@ -135,7 +135,7 @@
 - **第一步：**在文本框中**输入**全文检索文本。
 - **第二步：**按**Enter键**或点击**按钮**，系统将自动返回检索结果在下方。
 
-![图片1](C:\Users\yuyu\Downloads\图片1.png)
+![图片1](./xy_code/assets/image05.png)
 
 ##### 2.1.2 高级检索
 
@@ -143,36 +143,36 @@
 - **第二步：**选择、输入高级检索条件。
 - **第三步：**点击检索按钮，系统将自动返回检索结果在下方。
 
-![图片2](C:\Users\yuyu\Downloads\图片2.png)
+![图片2](./xy_code/assets/image06.png)
 
-![image-20250526052028837](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526052028837.png)
+![image-20250526052028837](./xy_code/assets/image07.png)
 
 ##### 2.1.3 增删条件
 
 - 点击每个条件后的×删除条件。
 - 点击左侧面板的条件新增筛选条件。
 
-![图片4](C:\Users\yuyu\Downloads\图片4.png)
+![图片4](./xy_code/assets/image08.png)
 
 ##### 2.1.4 排序
 
 -  选择排序方式。
 
-![图片5](C:\Users\yuyu\Downloads\图片5.png)
+![图片5](./xy_code/assets/image09.png)
 
 #### 2.2 使用说明-法规案例详情
 
 - 点击单个法规案例框进入详情界面。
 
-![图片6](C:\Users\yuyu\Downloads\图片6.png)
+![图片6](./xy_code/assets/image10.png)
 
-![image-20250526054534213](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526054534213.png)
+![image-20250526054534213](./xy_code/assets/image11.png)
 
 ### 3️⃣ 智能分析
 
 ​	    该系统是一个面向社会信用治理场景的智能法律咨询平台，支持多轮对话交互，用户可就失信惩戒、工程合同等问题进行提问，系统通过引用相关法律条文和案例判决进行专业分析，提供具有法律依据的解答。同时，系统自动保留历史记录，便于用户回顾和追溯，提升咨询效率与决策支持能力，适用于司法审查、信用治理和风险预警等多种场景。
 
-![image12](D:\github\xy_code\assets\image12.png)
+![image12]./xy_code/assets/image12.png)
 
 ## 五、快速启动指南
 
