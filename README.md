@@ -254,7 +254,7 @@ docker compose up -d
 
 ------
 
-> 若需了解详细智能分析模块具体配置和操作管理见 (./xy_code/assets/ai_usage.md)
+> 若需了解详细智能分析模块具体配置和操作管理见 [智能分析模块指南](./xy_code/docker/ai_usage.md)
 
 ### ✅ 7. 访问系统
 
