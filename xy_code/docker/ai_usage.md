@@ -43,7 +43,7 @@ http://localhost/signin
 - 用户名：`739499915@qq.com`
 - 密码：`a12345678`
 
-![image-20250526170600153](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526170600153.png)
+![image-20250526170600153](./xy_code/assets/image-a.png)
 
 登录后点击顶部的「工作室」，选择：
 
@@ -57,13 +57,13 @@ http://localhost/signin
 2. 选择「发布更新」
 3. 点击「运行」进入工作流执行界面
 
-![image-20250526170812490](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526170812490.png)
+![image-20250526170812490](./xy_code/assets/image-b.png)
 
-![image-20250526170834966](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526170834966.png)
+![image-20250526170834966](./xy_code/assets/image-c.png)
 
-![image-20250526170852871](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526170852871.png)
+![image-20250526170852871](./xy_code/assets/image-d.png)
 
-![image-20250526170907540](C:\Users\yuyu\AppData\Roaming\Typora\typora-user-images\image-20250526170907540.png)
+![image-20250526170907540](./xy_code/assets/image-e.png)
 
 ------
 
