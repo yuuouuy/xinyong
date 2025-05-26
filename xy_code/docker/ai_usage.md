@@ -57,13 +57,13 @@ http://localhost/signin
 2. 选择「发布更新」
 3. 点击「运行」进入工作流执行界面
 
-![image-20250526170812490](./xy_code/assets/image-b.png)
+![image-20250526170812490](../../xy_code/assets/image-b.png)
 
-![image-20250526170834966](./xy_code/assets/image-c.png)
+![image-20250526170834966](../../xy_code/assets/image-c.png)
 
-![image-20250526170852871](./xy_code/assets/image-d.png)
+![image-20250526170852871](../../xy_code/assets/image-d.png)
 
-![image-20250526170907540](./xy_code/assets/image-e.png)
+![image-20250526170907540](../../xy_code/assets/image-e.png)
 
 ------
 
